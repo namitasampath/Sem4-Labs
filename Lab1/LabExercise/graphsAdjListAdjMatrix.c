@@ -1,3 +1,10 @@
+/*Write a program to implement the following graph representations and display
+them.
+i.	Adjacency list
+ii.	Adjacency matrix
+*/
+
+
 #include <stdio.h>
 #include <stdlib.h>
 
