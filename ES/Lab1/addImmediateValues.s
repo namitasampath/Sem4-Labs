@@ -1,3 +1,7 @@
+/*
+Add two immediate values in the registers and store the result in the third register.
+*/
+    
     AREA RESET, DATA, READONLY
     EXPORT __Vectors
 __Vectors
