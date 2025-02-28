@@ -63,7 +63,10 @@ FROM Instructor
 GROUP BY Dept_Name 
 HAVING AVG(Salary) > 50000 AND count()>5;
 
-
+--13.	Find all departments with the maximum budget.
+SELECT dept_name, budget
+FROM department
+WHERE budget = (SELECT MAX(budget) FROM department);
 
 
 
