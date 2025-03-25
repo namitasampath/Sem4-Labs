@@ -20,3 +20,27 @@ int main (void)
     }
 }
 //tbc void clock_wise funct
+
+void clock_wise(void)
+{
+    var1 = 0x00000001;                   // For Clockwise
+    for (i = 0; i < 3; i++)              // For A B C D Stepping
+    {
+        LPC_GPIO2->FIOCLR = 0x0000000F;
+        LPC_GPIO2->FIOSET = var1;
+        var1 = var1 << 1;                // For Clockwise
+        for (k = 0; k < 15000; k++);     // For step speed variation
+    }
+}
+
+void anti_clock_wise(void)
+{
+    var1 = 0x00000008;                   // For Anticlockwise
+    for (i = 0; i < 3; i++)              // For A B C D Stepping
+    {
+        LPC_GPIO2->FIOCLR = 0x0000000F;
+        LPC_GPIO2->FIOSET = var1;
+        var1 = var1 >> 1;                // For Anticlockwise
+        for (k = 0; k < 15000; k++);     // For step speed variation
+    }
+}
